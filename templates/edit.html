@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+
+{% block title %}contact{% endblock title %}
+{% block body %}
+<div class="c">
+    <img src="https://picsum.photos/1500/1000? width="1500" height="550" border="0"" class="d-block w-100" alt="...">
+</div>
+<div class="container my-4">
+    <h1 class="text-center">Contact Us</h1>
+    <form class="row g-3" method="post" action="/update/{{student.id}}">
+        <input type="hidden" name="id" id="id" Required maxlength="20" value="{{students.id}}"/>
+        {% csrf_token %}
+        <div class="col-12">
+            <label for="inputName" class="form-label">Name</label>
+            <input type="text" class="form-control" name="Name" id="inputName" value="{{students.Name}}">
+          </div>
+
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input type="email" class="form-control" name="Email" id="inputEmail4" value="{{students.Email}}">
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">PhoneNo.</label>
+          <input type="PhoneNo." class="form-control" name="PhoneNo" id="inputPassword4">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Address</label>
+          <input type="text" class="form-control" name="Address" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" name="City" id="inputCity">
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Zip</label>
+          <input type="text" class="form-control"name="Zip" id="inputZip">
+        </div>
+        
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+
+</div>
+{% endblock body %}
